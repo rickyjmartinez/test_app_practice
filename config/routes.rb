@@ -7,5 +7,6 @@ Rails.application.routes.draw do
   get "/photos" => "photos#index" #show all photos (READ)
   post "/photos" => "photos#create" #create a new entry to db (CREATE)
   get "/photos/:id" => "photos#show" #show one photo based on id dynamic (READ)
-  patch "/photos/:id" => "photos#update" #update a photo (UPDATE)
+  patch "/photos/:id" => "photos#update" #update a photo (UPDATE
+  delete "/photos/:id" => "photos#destroy" #deletes a photo by id (DESTROY)
 end
