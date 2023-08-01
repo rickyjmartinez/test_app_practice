@@ -4,6 +4,8 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "articles#index"
 
-  get "/photos" => "photos#index"
-  post "/photos" => "photos#create"
+  get "/photos" => "photos#index" #show all photos (READ)
+  post "/photos" => "photos#create" #create a new entry to db (CREATE)
+  get "/photos/:id" => "photos#show" #show one photo based on id dynamic (READ)
+  patch "/photos/:id" => "photos#update" #update a photo (UPDATE)
 end
